@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from ShazamAPI import Shazam
 
 '''audio_recognize returns a list of values in next perfomance:

@@ -1,16 +1,15 @@
-#Main imports
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from os import listdir
 from mp3_tagger import MP3File, VERSION_1, VERSION_2, VERSION_BOTH
 import re, shutil
 import os
 
-#import our file
 import shazam
 
-#matches for formats of files
 matches = [r'.+\.mp3', r'.+\.wav', r'.+\.ogg']
 
-#Get a list of files
 filesList = listdir()
 
 def __create_folder_if_not_exists__(name):
@@ -33,7 +32,6 @@ for i in filesList:
                 mp3.artist = tags['subtitle']
                 mp3.album = tags['album']
                 mp3.year = tags['year']
-                #mp3.genre = tags['genre']
                 mp3.copyright = tags['label']
                 mp3.save()
                 os.rename(i, tags['subtitle'] + ' - ' + tags['title'] + j.replace('+\.', ''))
