@@ -1,7 +1,9 @@
 1. Before use next commands for install libraries for python
 
 python -m pip install --upgrade pip
+
 pip install ShazamAPI
+
 pip install mp3-tagger
 
 2. On Linux your need to install ffmpeg utilities.
